@@ -1,0 +1,35 @@
+title: 'bp'
+description: bp is an oil & gas phenomenon.
+navigation: true
+hero:
+  title: 'Innovation for the future of our energy for today and tomorrow.'
+  description: 'bp’s engineers are at the heart of some of the world’s most complex projects, working on the deepest seabeds and in the harshest conditions.'
+  orientation: horizontal
+  links:
+    - label: Get started
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
+      to: '/getting-started'
+      size: lg
+    - label: Use this template
+      icon: i-simple-icons-github
+      size: lg
+      color: gray
+      to: ''
+features:
+  title: 'Sustainability'
+  links:
+    - label: 'Explore'
+      color: 'gray'
+      to: ''
+      size: lg
+  items:
+    - title: 'bp'
+      description: 'Powered by bp for optimal SEO.'
+      to: ''
+    - title: 'Markdown'
+      description: 'Write your pages with new MDC.'
+      to: ''
+    - title: 'bpChevron'
+      description: 'Full set of custom components.'
+      to: ''
