@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-5xl py-8 px-4 mx-auto">
     <h1 class="text-3xl font-bold">
-      OpenAI Image Generation
+      OpenAIz Image Generation
     </h1>
     <div class="mt-8 p-4 grid grid-cols-1 gap-6 items-start border rounded">
       <form
