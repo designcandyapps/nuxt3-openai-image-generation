@@ -7,7 +7,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
 
-    "lint": "eslint .",
+    "lint": "eslint --fix .",
     "typecheck": "nuxt typecheck"
   },
   "devDependencies": {
