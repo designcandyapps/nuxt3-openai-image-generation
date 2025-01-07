@@ -41,6 +41,5 @@
     "@vueuse/nuxt": "^11.1.0",
     "nuxt": "^3.13.2",
     "nuxt-og-image": "^3.0.6"
-  },
-  "packageManager": "pnpm@9.12.2"
+  }
 }
