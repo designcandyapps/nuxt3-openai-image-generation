@@ -6,16 +6,14 @@
     <div class="mt-8 p-4 grid grid-cols-1 gap-6 items-start border rounded">
       <form
         class="grid grid-cols-1 gap-6"
-        @submit.prevent="generateImage"
-      >
+        @submit.prevent="generateImage">
         <label class="block">
           <span class="text-sm font-bold">API Key</span>
           <input
             v-model="apiKey"
             type="text"
             class="form-input rounded mt-1 block w-full dark:bg-nuxt-gray"
-            placeholder="OpenAI API Key"
-          >
+            placeholder="OpenAI API Key">
         </label>
         <label class="block">
           <span class="text-sm font-bold">Prompt</span>
@@ -23,16 +21,14 @@
             v-model="prompt"
             type="text"
             class="form-input rounded mt-1 block w-full dark:bg-nuxt-gray"
-            placeholder="Image description"
-          >
+            placeholder="Image description">
         </label>
         <label class="block">
           <span class="text-sm font-bold">Size</span>
           <select
             id="size"
             v-model="size"
-            class="form-select rounded mt-1 block w-full dark:bg-nuxt-gray"
-          >
+            class="form-select rounded mt-1 block w-full dark:bg-nuxt-gray">
             <option value="small">
               Small
             </option>
@@ -48,8 +44,7 @@
           type="submit"
           class="inline-flex justify-center items-center rounded border border-transparent bg-nuxt-green py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-nuxt-green focus:outline-none focus:ring-2 focus:ring-nuxt-green focus:ring-offset-2"
           :class="{'animate-spi': loading }"
-          :disabled="loading"
-        >
+          :disabled="loading">
           <Icon
             v-show="loading"
             class="mr-2 animate-spin"
@@ -60,8 +55,7 @@
         </button>
         <span
           v-if="formErrorMessage"
-          class="text-red-500"
-        >
+          class="text-red-500">
           {{ formErrorMessage }}
         </span>
       </form>
@@ -97,11 +91,9 @@ const imageSize = computed(() => {
 const imageUrl = ref('')
 const formErrorMessage = ref('')
 const loading = ref(false)
-
 async function generateImage () {
   formErrorMessage.value = ''
   loading.value = true
-
   const { data, error } = await useFetch('/api/openai-generate-image', {
     method: 'post',
     body: {
@@ -111,10 +103,10 @@ async function generateImage () {
     }
   })
   imageUrl.value = data.value ?? ''
+  alert('Test00: '+imageUrl.value)
   if (error.value) {
     formErrorMessage.value = error.value.data.data.error.message
   }
   loading.value = false
 }
-
 </script>
