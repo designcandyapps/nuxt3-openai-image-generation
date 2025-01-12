@@ -104,7 +104,7 @@ async function generateImage () {
   })
   imageUrl.value=data.value??''
   alert('TestZ2b: '+JSON.stringify(data,null,2));
-  document.getElementById("size").innerHTML(JSON.stringify(data,null,2));
+  formErrorMessage.value=JSON.stringify(data,null,2);
 
   if (error.value) {
     formErrorMessage.value = error.value.data.data.error.message
