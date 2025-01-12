@@ -9,6 +9,7 @@ interface CreateImage {
 }
 type CreateImageRequestSize = '256x256' | '512x512' | '1024x1024'
 export default defineEventHandler(async (event) => {
+  
   const body: CreateImage = await readBody(event)
   const { apiKey, prompt, size } = body
   const configuration = new Configuration({
@@ -34,9 +35,12 @@ export default defineEventHandler(async (event) => {
       size: imageSize
     })
     const imageUrl = response.data?.data[0]?.url ?? ''
+
+    alert(event.node.res.statusCode)
     event.node.res.statusCode = 200
+
     return imageUrl
-    alert('Test0: '+imageUrl)
+    alert('Test0a: '+response.data)
   } catch (error) {
     if ((error as any).response) {
       return sendError(event, createError({
