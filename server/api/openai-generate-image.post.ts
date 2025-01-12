@@ -35,10 +35,7 @@ export default defineEventHandler(async (event) => {
       size: imageSize
     })
     const imageUrl = response.data?.data[0]?.url ?? ''
-
-    alert(event.node.res.statusCode)
     event.node.res.statusCode = 200
-
     return imageUrl
     alert('Test0a: '+response.data)
   } catch (error) {
