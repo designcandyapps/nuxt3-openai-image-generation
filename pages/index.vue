@@ -103,10 +103,7 @@ async function generateImage () {
     }
   })
   imageUrl.value=data.value??''
-  alert('Test00ab: '+data.value);
-
-  alert('TestZ1a: '+JSON.stringify(data,null,2));
-  alert('TestZ2b: '+JSON.stringify(data.value,null,2));
+  alert('TestZ2b: '+JSON.stringify(data,null,2));
 
   if (error.value) {
     formErrorMessage.value = error.value.data.data.error.message
